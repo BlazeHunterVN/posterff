@@ -52,8 +52,10 @@ const nationData = {
     },
     vietnam: {
         images: [
-            { url: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251114_OB47VN_TW1_Will_of_Fire_Bundle.png', startDate: '14/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251114_OB47VN_TW1_Will_of_Fire_Bundle.png', title: 'Will of Fire Bundle' },
-            { url: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251116_OB47VN_FW3_Naatu_Naatu.png', startDate: '16/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251116_OB47VN_FW3_Naatu_Naatu.png', title: 'Naatu Naatu Event' }
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251117_OB47VN_Squad_Treasure_Digimon.png', startDate: '17/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251117_OB47VN_Squad_Treasure_Digimon.png', title: 'Squad_Treasure_Digimon' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251117_OB47VN_TW3_M590_MetalGarurumon.png', startDate: '17/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251117_OB47VN_TW3_M590_MetalGarurumon.png', title: 'TW3_M590_MetalGarurumon' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251116_OB47VN_FW3_Naatu_Naatu.png', startDate: '16/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251116_OB47VN_FW3_Naatu_Naatu.png', title: 'FW3_Naatu_Naatu' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251114_OB47VN_TW1_Will_of_Fire_Bundle.png', startDate: '14/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251114_OB47VN_TW1_Will_of_Fire_Bundle.png', title: 'TW1_Will_of_Fire_Bundle' },
         ]
     }
 };
