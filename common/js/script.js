@@ -52,10 +52,10 @@ const nationData = {
     },
     vietnam: {
         images: [
-            { url: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251117_OB47VN_Squad_Treasure_Digimon.png', startDate: '17/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251117_OB47VN_Squad_Treasure_Digimon.png', title: 'Squad Treasure Digimon' },
-            { url: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251117_OB47VN_TW3_M590_MetalGarurumon.png', startDate: '17/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251117_OB47VN_TW3_M590_MetalGarurumon.png', title: 'TW3 M590 MetalGarurumon' },
-            { url: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251116_OB47VN_FW3_Naatu_Naatu.png', startDate: '16/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251116_OB47VN_FW3_Naatu_Naatu.png', title: 'FW3 Naatu Naatu' },
-            { url: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251114_OB47VN_TW1_Will_of_Fire_Bundle.png', startDate: '14/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251114_OB47VN_TW1_Will_of_Fire_Bundle.png', title: 'TW1 Will Of Fire Bundle' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251117_OB47VN_Squad_Treasure_Digimon.png', startDate: '17/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251117_OB47VN_Squad_Treasure_Digimon.png', title: 'Squad_Treasure_Digimon' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251117_OB47VN_TW3_M590_MetalGarurumon.png', startDate: '17/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251117_OB47VN_TW3_M590_MetalGarurumon.png', title: 'TW3_M590_MetalGarurumon' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251116_OB47VN_FW3_Naatu_Naatu.png', startDate: '16/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251116_OB47VN_FW3_Naatu_Naatu.png', title: 'FW3_Naatu_Naatu' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251114_OB47VN_TW1_Will_of_Fire_Bundle.png', startDate: '14/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251114_OB47VN_TW1_Will_of_Fire_Bundle.png', title: 'TW1_Will_of_Fire_Bundle' },
         ]
     }
 };
@@ -90,6 +90,8 @@ const layer2 = document.getElementById('background-layer-2');
 const homeHeading = document.getElementById('home-heading-1');
 const homeParagraph = document.getElementById('home-paragraph-1');
 
+let activeLayer = layer1;
+let nextLayer = layer2;
 
 function showSection(section) {
     const allSections = document.querySelectorAll('.content-section');
@@ -117,29 +119,23 @@ navLinks.forEach(link => {
         const isNationLink = (parentLi && parentLi.classList.contains('dropdown'));
         const isCountryLink = (parentLi && parentLi.closest('.dropdown-menu'));
 
-        // Logic Responsive Menu (Cho thiết bị di động)
         if (window.innerWidth <= 768) {
-            // Khi click vào Nation (cha)
             if (isNationLink && !isCountryLink) {
                 if (nationDropdownLi) {
                     nationDropdownLi.classList.toggle('active');
                 }
-                // Nếu click vào /nation, vẫn xử lý routing
                 if (path === '/nation') {
                     handleRouting(path, country);
                 }
                 return;
             }
 
-            // Nếu click vào link con hoặc link khác (Home, Contact)
             if (isCountryLink || path === '/' || path === '/contact') {
-                // Đóng menu burger và dropdown
                 navbar.classList.remove('active');
                 if (nationDropdownLi) {
                     nationDropdownLi.classList.remove('active');
                 }
                 const menuIcon = menuToggle.querySelector('i');
-                // Giả định bạn dùng Font Awesome và đổi icon
                 menuIcon.classList.remove('fa-times');
                 menuIcon.classList.add('fa-bars');
             }
@@ -207,12 +203,29 @@ menuToggle.addEventListener('click', () => {
     } else {
         menuIcon.classList.remove('fa-times');
         menuIcon.classList.add('fa-bars');
-        // Đóng dropdown nếu menu chính đóng
         if (nationDropdownLi && nationDropdownLi.classList.contains('active')) {
             nationDropdownLi.classList.remove('active');
         }
     }
 });
+
+function getEventStatus(startDateString) {
+    if (!startDateString) {
+        return { status: 'none', label: '' };
+    }
+
+    const [day, month, year] = startDateString.split('/').map(Number);
+    const startDate = new Date(year, month - 1, day);
+    const now = new Date();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const eventDay = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate());
+
+    if (eventDay <= today) {
+        return { status: 'active', label: 'ACTIVE' };
+    } else {
+        return { status: 'upcoming', label: 'UPCOMING' };
+    }
+}
 
 function displayImages(country) {
     imageGrid.innerHTML = '';
@@ -221,9 +234,9 @@ function displayImages(country) {
 
     if (images.length === 0 || country === 'default') {
         imageGrid.innerHTML = `<div style="text-align: center; width: 100%; padding: 50px; color: #aaa;">
-                                <h1>Please select a country from the Nation menu.</h1>
-                                <p>Or, this nation is currently updating its banner data.</p>
-                               </div>`;
+                                 <h1>Please select a country from the Nation menu.</h1>
+                                 <p>Or, this nation is currently updating its banner data.</p>
+                                </div>`;
         return;
     }
 
@@ -232,6 +245,16 @@ function displayImages(country) {
         gridItem.classList.add('grid-item');
         gridItem.dataset.country = country;
         gridItem.dataset.index = index;
+
+        const { status, label } = getEventStatus(imageData.startDate);
+
+        if (status !== 'none') {
+            const badgeElement = document.createElement('div');
+            badgeElement.classList.add('event-badge', `${status}-event`);
+            badgeElement.textContent = label;
+            badgeElement.style.display = 'block';
+            gridItem.appendChild(badgeElement);
+        }
 
         const imgElement = document.createElement('img');
         imgElement.src = imageData.url;
@@ -372,37 +395,24 @@ function preloadImages(imageUrls) {
     return Promise.all(promises);
 }
 
-// LOGIC SLIDESHOW CROSS-FADE ĐÃ CHẮC CHẮN HOẠT ĐỘNG
 function changeBackground() {
     const totalImages = homeBackgrounds.length;
     if (totalImages < 2) return;
 
-    // Tăng chỉ số ảnh hiện tại (ảnh nằm dưới, sẽ được hiển thị sau 2s)
     currentBgIndex = (currentBgIndex + 1) % totalImages;
-
-    // Ảnh tiếp theo (ảnh nằm trên, sẽ được tải trước)
     const nextBgIndex = (currentBgIndex + 1) % totalImages;
 
-    // 1. Kích hoạt hiệu ứng: Đặt Layer 1 (Layer trên) mờ dần (opacity 0)
-    // Layer 1 có transition 2s, nên nó sẽ mờ dần trong 2s
-    layer1.style.opacity = 0;
+    activeLayer.classList.remove('active');
 
-    // 2. Chờ hiệu ứng mờ dần hoàn tất (2000ms = 2s)
+    [activeLayer, nextLayer] = [nextLayer, activeLayer];
+
+    activeLayer.classList.add('active');
+
     setTimeout(() => {
-
-        // 3. Layer 2 (Lớp dưới) giờ đang được hiển thị 
-        // -> Cập nhật Layer 2 với ảnh mới nhất (ảnh đang hiện)
-        layer2.style.backgroundImage = `url('${homeBackgrounds[currentBgIndex]}')`;
-
-        // 4. Cập nhật Layer 1 (Lớp trên) với ảnh sắp tới
-        layer1.style.backgroundImage = `url('${homeBackgrounds[nextBgIndex]}')`;
-
-        // 5. Khôi phục Layer 1 (Layer trên) opacity 1 (Hoàn tất chuyển cảnh)
-        // Layer 1 sẽ chuyển từ opacity 0 -> 1 trong 2s
-        layer1.style.opacity = 1;
-
-    }, 2000); // 2000ms phải bằng thời gian transition trong CSS
+        nextLayer.style.backgroundImage = `url('${homeBackgrounds[nextBgIndex]}')`;
+    }, 2000);
 }
+
 
 function startBackgroundSlideshow() {
     const totalImages = homeBackgrounds.length;
@@ -414,25 +424,28 @@ function startBackgroundSlideshow() {
 
     preloadImages(homeBackgrounds)
         .then(() => {
-            // Thiết lập ban đầu
-            // Layer 2 (Dưới): Ảnh 0 (Đang hiện)
-            layer2.style.backgroundImage = `url('${homeBackgrounds[0]}')`;
-            layer2.style.opacity = 1;
-
-            // Layer 1 (Trên): Ảnh 1 (Sắp tới)
-            const nextIndex = (currentBgIndex + 1) % totalImages;
-            layer1.style.backgroundImage = `url('${homeBackgrounds[nextIndex]}')`;
-            layer1.style.opacity = 1;
-
-            // Bắt đầu vòng lặp chuyển cảnh (Tổng thời gian chu kỳ: 5000ms = 3s chờ + 2s chuyển)
-            if (totalImages > 1) {
-                slideshowInterval = setInterval(changeBackground, 5000);
+            if (totalImages === 1) {
+                layer1.style.backgroundImage = `url('${homeBackgrounds[0]}')`;
+                layer1.classList.add('active');
+                layer2.classList.remove('active');
+                return;
             }
+
+            layer1.style.backgroundImage = `url('${homeBackgrounds[0]}')`;
+            layer1.classList.add('active');
+
+            const nextIndex = (currentBgIndex + 1) % totalImages;
+            layer2.style.backgroundImage = `url('${homeBackgrounds[nextIndex]}')`;
+            layer2.classList.remove('active');
+
+            activeLayer = layer1;
+            nextLayer = layer2;
+            currentBgIndex = 0;
+
+            slideshowInterval = setInterval(changeBackground, 5000);
         });
 }
 
-// Gọi hàm khởi động slideshow khi trang tải
 if (homeSection && homeSection.classList.contains('active')) {
     startBackgroundSlideshow();
-
 }

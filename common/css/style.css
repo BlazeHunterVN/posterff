@@ -273,13 +273,18 @@ ul {
     transition: opacity 0s;
 }
 
+/* Tinh chỉnh này đảm bảo hình ảnh vừa khung và bị cắt theo border-radius của .grid-item */
 .image-grid img {
     max-width: 100%;
-    max-height: 250px;
+    max-height: none;
+    /* Bỏ giới hạn max-height để ảnh lấp đầy */
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 100%;
+    /* Cần 100% để lấp đầy grid-item */
+    object-fit: cover;
+    /* Quan trọng: Đảm bảo vừa khung và cắt bỏ phần thừa */
     border-radius: 4px;
+    /* Giữ nguyên 4px nếu bạn muốn ảnh có bo tròn nhỏ hơn item */
     margin-bottom: 0;
 }
 
@@ -527,4 +532,29 @@ ul {
     #home-section p {
         font-size: 1.2rem;
     }
+}
+
+/* --- CSS cho Nhãn UPCOMING/ACTIVE (Đã tinh chỉnh để vừa khung) --- */
+/* .grid-item đã có position: relative và overflow: hidden */
+
+.event-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 4px;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.event-badge.active-event {
+    background-color: #ff9800;
+}
+
+.event-badge.upcoming-event {
+    background-color: #4CAF50;
 }
