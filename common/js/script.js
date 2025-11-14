@@ -16,23 +16,23 @@ const nationData = {
     },
     indonesia: {
         images: [
-            { url: 'https://dl.dir.freefiremobile.com/common/OB50/ID/annoOverview_sosmedcraftland.jpg', startDate: '', bannerLink: 'https://www.tiktok.com/@ffid.craftland?lang=en', title: 'Craftland TikTok' }
+            { url: 'https://dl.dir.freefiremobile.com/common/OB50/ID/annoOverview_sosmedcraftland.jpg', startDate: '', bannerLink: 'https://www.tiktok.com/@ffid.craftland?lang=en', title: 'TikTok Craftland' }
         ]
     },
     pakistan: {
         images: [
-            { url: 'https://dl.dir.freefiremobile.com/common/Local/IND/config/1400x700_ig_en.jpg', startDate: '', bannerLink: 'https://www.instagram.com/freefirepkofficial/?hl=en', title: 'Official Instagram' },
-            { url: 'https://dl.dir.freefiremobile.com/common/Local/IND/config/1400x700_enfb.jpg', startDate: '', bannerLink: 'https://www.facebook.com/freefireenn/?brand_redir=139274140865488#', title: 'Official Facebook' },
-            { url: 'https://dl.dir.freefiremobile.com/common/Local/IND/config/1400x700_enyoutube.jpg', startDate: '', bannerLink: 'https://www.youtube.com/@FreeFirePakistanOfficial', title: 'Official YouTube' },
-            { url: 'https://dl.dir.freefiremobile.com/common/Local/IND/config/1400x700_entiktok.jpg', startDate: '', bannerLink: 'https://www.tiktok.com/@garenafreefirepkofficial', title: 'Official TikTok' }
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/IND/config/1400x700_ig_en.jpg', startDate: '', bannerLink: 'https://www.instagram.com/freefirepkofficial/?hl=en', title: 'Instagram Official ' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/IND/config/1400x700_enfb.jpg', startDate: '', bannerLink: 'https://www.facebook.com/freefireenn/?brand_redir=139274140865488#', title: 'Facebook Official' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/IND/config/1400x700_enyoutube.jpg', startDate: '', bannerLink: 'https://www.youtube.com/@FreeFirePakistanOfficial', title: 'YouTube Official' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/IND/config/1400x700_entiktok.jpg', startDate: '', bannerLink: 'https://www.tiktok.com/@garenafreefirepkofficial', title: 'TikTok Official' }
         ]
     },
     singapore: {
         images: [
-            { url: 'https://dl.dir.freefiremobile.com/common/Local/IND/config/1400x700_ig_en.jpg', startDate: '', bannerLink: 'https://www.instagram.com/freefiremalaysiaofficial/', title: 'Official Instagram' },
-            { url: 'https://dl.dir.freefiremobile.com/common/Local/IND/config/1400x700_enfb.jpg', startDate: '', bannerLink: 'https://www.facebook.com/freefiremalaysia/', title: 'Official Facebook' },
-            { url: 'https://dl.dir.freefiremobile.com/common/Local/IND/config/1400x700_enyoutube.jpg', startDate: '', bannerLink: 'https://www.youtube.com/@freefiremalaysiaofficial', title: 'Official YouTube' },
-            { url: 'https://dl.dir.freefiremobile.com/common/Local/IND/config/1400x700_entiktok.jpg', startDate: '', bannerLink: 'https://www.tiktok.com/@freefiremalaysiaofficial', title: 'Official TikTok' }
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/IND/config/1400x700_ig_en.jpg', startDate: '', bannerLink: 'https://www.instagram.com/freefiremalaysiaofficial/', title: 'Instagram Official' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/IND/config/1400x700_enfb.jpg', startDate: '', bannerLink: 'https://www.facebook.com/freefiremalaysia/', title: 'Facebook Official' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/IND/config/1400x700_enyoutube.jpg', startDate: '', bannerLink: 'https://www.youtube.com/@freefiremalaysiaofficial', title: 'YouTube Official' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/IND/config/1400x700_entiktok.jpg', startDate: '', bannerLink: 'https://www.tiktok.com/@freefiremalaysiaofficial', title: 'TikTok Official' }
         ]
     },
     taiwan: {
@@ -43,8 +43,8 @@ const nationData = {
     thailand: {
         images: [
             { url: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW5_EA_DA_Bizon_Preheat1_Prime.png', startDate: '16/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW4_DA_M590_Preheat1.png', title: 'Bizon Preheat' },
-            { url: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW4_DA_M590_Preheat2.png', startDate: '16/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW4_DA_M590_Preheat2.png', title: 'TW4 DA M590 Preheat2' },
-            { url: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW4_DA_M590_Preheat1.png', startDate: '15/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW4_DA_M590_Preheat1.png', title: 'TW4 DA M590 Preheat1' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW4_DA_M590_Preheat2.png', startDate: '16/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW4_DA_M590_Preheat2.png', title: 'TW4 DA M590 Preheat 2' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW4_DA_M590_Preheat1.png', startDate: '15/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW4_DA_M590_Preheat1.png', title: 'TW4 DA M590 Preheat 1' },
             { url: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW3_UnisexBundle_FFWS.png', startDate: '15/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW3_UnisexBundle_FFWS.png', title: 'FFWS Unisex Bundle' },
             { url: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW1_EvoVault.png', startDate: '14/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW1_EvoVault.png', title: 'TW1 EvoVault' },
             { url: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/2025Nov_FA_DIGI_FlexHigh_Playwithfriends_games_Multimission_2.png', startDate: '14/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/2025Nov_FA_DIGI_FlexHigh_Playwithfriends_games_Multimission_2.png', title: 'Play with Friends' }
@@ -52,10 +52,10 @@ const nationData = {
     },
     vietnam: {
         images: [
-            { url: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251117_OB47VN_Squad_Treasure_Digimon.png', startDate: '17/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251117_OB47VN_Squad_Treasure_Digimon.png', title: 'Squad_Treasure_Digimon' },
-            { url: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251117_OB47VN_TW3_M590_MetalGarurumon.png', startDate: '17/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251117_OB47VN_TW3_M590_MetalGarurumon.png', title: 'TW3_M590_MetalGarurumon' },
-            { url: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251116_OB47VN_FW3_Naatu_Naatu.png', startDate: '16/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251116_OB47VN_FW3_Naatu_Naatu.png', title: 'FW3_Naatu_Naatu' },
-            { url: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251114_OB47VN_TW1_Will_of_Fire_Bundle.png', startDate: '14/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251114_OB47VN_TW1_Will_of_Fire_Bundle.png', title: 'TW1_Will_of_Fire_Bundle' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251117_OB47VN_Squad_Treasure_Digimon.png', startDate: '17/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251117_OB47VN_Squad_Treasure_Digimon.png', title: 'Squad Treasure Digimon' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251117_OB47VN_TW3_M590_MetalGarurumon.png', startDate: '17/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251117_OB47VN_TW3_M590_MetalGarurumon.png', title: 'TW3 M590 MetalGarurumon' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251116_OB47VN_FW3_Naatu_Naatu.png', startDate: '16/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251116_OB47VN_FW3_Naatu_Naatu.png', title: 'FW3 Naatu Naatu' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251114_OB47VN_TW1_Will_of_Fire_Bundle.png', startDate: '14/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251114_OB47VN_TW1_Will_of_Fire_Bundle.png', title: 'TW1 Will Of Fire Bundle' },
         ]
     }
 };
@@ -448,4 +448,5 @@ function startBackgroundSlideshow() {
 
 if (homeSection && homeSection.classList.contains('active')) {
     startBackgroundSlideshow();
+
 }
