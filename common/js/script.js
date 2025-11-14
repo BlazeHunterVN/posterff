@@ -1,0 +1,435 @@
+const nationData = {
+    brazil: {
+        images: [
+            { url: 'https://dl.dir.freefiremobile.com/common/OB50/BR/Bunny_Verse_Bundle_Gloo_Ver2_1750x1070_BR_pt.png', startDate: '15/09/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/OB50/BR/Bunny_Verse_Bundle_Gloo_Ver2_1750x1070_BR_pt.png', title: 'Bunny Verse Bundle' },
+            { url: 'https://dl.dir.freefiremobile.com/common/OB50/BR/Misty_Constellate_Bundle_1750x1070_BR_pt.png', startDate: '15/09/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/OB50/BR/Misty_Constellate_Bundle_1750x1070_BR_pt.png', title: 'Misty Constellate Bundle' },
+            { url: 'https://dl.dir.freefiremobile.com/common/OB50/BR/Evo_AK47_1750x1070_BR_pt.png', startDate: '12/09/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/OB50/BR/Evo_AK47_1750x1070_BR_pt.png', title: 'Evo AK47' },
+            { url: 'https://dl.dir.freefiremobile.com/common/OB50/BR/Infernal_Soldier_Relaunch_1750x1070_BR_pt.png', startDate: '12/09/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/OB50/BR/Infernal_Soldier_Relaunch_1750x1070_BR_pt.png', title: 'Infernal Soldier Relaunch' }
+        ]
+    },
+    india: {
+        images: [
+            { url: 'https://dl-tata.freefireind.in/common/Local/IND/config/1400x700_TheLatestUpdatesINDanno_en.jpg', startDate: '', bannerLink: 'https://www.instagram.com/freefireindiaofficial/', title: 'Latest Updates' },
+            { url: 'https://dl-tata.freefireind.in/common/Local/IND/config/1400x700_StayInLoopAnnIND_en.jpg', startDate: '', bannerLink: 'https://www.facebook.com/freefireIND', title: 'Stay In Loop' },
+            { url: 'https://dl-tata.freefireind.in/common/Local/IND/config/1400x700_WatchTheBattleUnfoldINDAnno_en.jpg', startDate: '', bannerLink: 'https://www.youtube.com/@FreeFireIndiaOfficial', title: 'Watch The Battle Unfold' }
+        ]
+    },
+    indonesia: {
+        images: [
+            { url: 'https://dl.dir.freefiremobile.com/common/OB50/ID/annoOverview_sosmedcraftland.jpg', startDate: '', bannerLink: 'https://www.tiktok.com/@ffid.craftland?lang=en', title: 'Craftland TikTok' }
+        ]
+    },
+    pakistan: {
+        images: [
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/IND/config/1400x700_ig_en.jpg', startDate: '', bannerLink: 'https://www.instagram.com/freefirepkofficial/?hl=en', title: 'Official Instagram' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/IND/config/1400x700_enfb.jpg', startDate: '', bannerLink: 'https://www.facebook.com/freefireenn/?brand_redir=139274140865488#', title: 'Official Facebook' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/IND/config/1400x700_enyoutube.jpg', startDate: '', bannerLink: 'https://www.youtube.com/@FreeFirePakistanOfficial', title: 'Official YouTube' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/IND/config/1400x700_entiktok.jpg', startDate: '', bannerLink: 'https://www.tiktok.com/@garenafreefirepkofficial', title: 'Official TikTok' }
+        ]
+    },
+    singapore: {
+        images: [
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/IND/config/1400x700_ig_en.jpg', startDate: '', bannerLink: 'https://www.instagram.com/freefiremalaysiaofficial/', title: 'Official Instagram' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/IND/config/1400x700_enfb.jpg', startDate: '', bannerLink: 'https://www.facebook.com/freefiremalaysia/', title: 'Official Facebook' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/IND/config/1400x700_enyoutube.jpg', startDate: '', bannerLink: 'https://www.youtube.com/@freefiremalaysiaofficial', title: 'Official YouTube' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/IND/config/1400x700_entiktok.jpg', startDate: '', bannerLink: 'https://www.tiktok.com/@freefiremalaysiaofficial', title: 'Official TikTok' }
+        ]
+    },
+    taiwan: {
+        images: [
+            { url: '', startDate: '', bannerLink: '', title: 'No Data Available' }
+        ]
+    },
+    thailand: {
+        images: [
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW5_EA_DA_Bizon_Preheat1_Prime.png', startDate: '16/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW4_DA_M590_Preheat1.png', title: 'Bizon Preheat' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW4_DA_M590_Preheat2.png', startDate: '16/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW4_DA_M590_Preheat2.png', title: 'M590 Preheat 2' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW4_DA_M590_Preheat1.png', startDate: '15/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW4_DA_M590_Preheat1.png', title: 'M590 Preheat 1' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW3_UnisexBundle_FFWS.png', startDate: '15/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW3_UnisexBundle_FFWS.png', title: 'FFWS Unisex Bundle' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW1_EvoVault.png', startDate: '14/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW1_EvoVault.png', title: 'Evo Vault' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/2025Nov_FA_DIGI_FlexHigh_Playwithfriends_games_Multimission_2.png', startDate: '14/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/2025Nov_FA_DIGI_FlexHigh_Playwithfriends_games_Multimission_2.png', title: 'Play with Friends' }
+        ]
+    },
+    vietnam: {
+        images: [
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251114_OB47VN_TW1_Will_of_Fire_Bundle.png', startDate: '14/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251114_OB47VN_TW1_Will_of_Fire_Bundle.png', title: 'Will of Fire Bundle' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251116_OB47VN_FW3_Naatu_Naatu.png', startDate: '16/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/VN/Splash_Upload/251116_OB47VN_FW3_Naatu_Naatu.png', title: 'Naatu Naatu Event' }
+        ]
+    }
+};
+
+const menuToggle = document.querySelector('.menu-toggle');
+const navbar = document.querySelector('.navbar');
+const homeSection = document.getElementById('home-section');
+const nationSection = document.getElementById('nation-section');
+const nationHeading = document.getElementById('nation-heading');
+const imageGrid = document.getElementById('image-grid');
+const contactSection = document.getElementById('contact-section');
+const logoLink = document.querySelector('.logo a');
+
+const gridOverlay = document.getElementById('grid-overlay');
+const overlayTitle = document.getElementById('overlay-title');
+const overlayDate = document.getElementById('overlay-date');
+const overlayLink = document.getElementById('overlay-link');
+const closeBtn = document.querySelector('.close-btn');
+const overlayImage = document.getElementById('overlay-image');
+
+const nationDropdownLi = document.querySelector('.dropdown');
+const nationDropdownLink = nationDropdownLi ? nationDropdownLi.querySelector('.nav-link') : null;
+
+const homeBackgrounds = [
+    '/common/image/background_free_fire_53.png',
+    '/common/image/background_free_fire_55.png'
+];
+let currentBgIndex = 0;
+let slideshowInterval;
+const layer1 = document.getElementById('background-layer-1');
+const layer2 = document.getElementById('background-layer-2');
+const homeHeading = document.getElementById('home-heading-1');
+const homeParagraph = document.getElementById('home-paragraph-1');
+
+
+function showSection(section) {
+    const allSections = document.querySelectorAll('.content-section');
+    allSections.forEach(s => s.classList.remove('active'));
+    section.classList.add('active');
+
+    if (section !== homeSection) {
+        clearInterval(slideshowInterval);
+    } else {
+        startBackgroundSlideshow();
+    }
+}
+
+const navLinks = document.querySelectorAll('.nav-links a');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const path = e.target.getAttribute('href');
+        const parts = path.split('/');
+        const country = parts[parts.length - 1];
+
+        const parentLi = e.target.closest('li');
+        const isNationLink = (parentLi && parentLi.classList.contains('dropdown'));
+        const isCountryLink = (parentLi && parentLi.closest('.dropdown-menu'));
+
+        // Logic Responsive Menu (Cho thiết bị di động)
+        if (window.innerWidth <= 768) {
+            // Khi click vào Nation (cha)
+            if (isNationLink && !isCountryLink) {
+                if (nationDropdownLi) {
+                    nationDropdownLi.classList.toggle('active');
+                }
+                // Nếu click vào /nation, vẫn xử lý routing
+                if (path === '/nation') {
+                    handleRouting(path, country);
+                }
+                return;
+            }
+
+            // Nếu click vào link con hoặc link khác (Home, Contact)
+            if (isCountryLink || path === '/' || path === '/contact') {
+                // Đóng menu burger và dropdown
+                navbar.classList.remove('active');
+                if (nationDropdownLi) {
+                    nationDropdownLi.classList.remove('active');
+                }
+                const menuIcon = menuToggle.querySelector('i');
+                // Giả định bạn dùng Font Awesome và đổi icon
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        }
+
+        handleRouting(path, country);
+
+        setTimeout(initializeHomeAnimation, 50);
+    });
+});
+
+
+logoLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    handleRouting('/');
+    setTimeout(initializeHomeAnimation, 50);
+});
+
+function handleRouting(path, country) {
+    if (path === '/') {
+        showSection(homeSection);
+        nationHeading.textContent = '';
+    } else if (path.startsWith('/nation/')) {
+        showSection(nationSection);
+        nationHeading.textContent = country.charAt(0).toUpperCase() + country.slice(1);
+        displayImages(country);
+    } else if (path === '/nation') {
+        showSection(nationSection);
+        nationHeading.textContent = 'Nation';
+        displayImages('default');
+    } else if (path === '/contact') {
+        showSection(contactSection);
+        nationHeading.textContent = 'Contact';
+    } else {
+        showSection(homeSection);
+    }
+
+    window.history.pushState({}, '', path);
+}
+
+window.addEventListener('popstate', () => {
+    const currentPath = window.location.pathname;
+    const parts = currentPath.split('/');
+    const country = parts[parts.length - 1];
+
+    handleRouting(currentPath, country);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const currentPath = window.location.pathname;
+    const parts = currentPath.split('/');
+    const country = parts[parts.length - 1];
+
+    handleRouting(currentPath, country);
+    setTimeout(initializeHomeAnimation, 100);
+});
+
+menuToggle.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+    const menuIcon = menuToggle.querySelector('i');
+
+    if (navbar.classList.contains('active')) {
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-times');
+    } else {
+        menuIcon.classList.remove('fa-times');
+        menuIcon.classList.add('fa-bars');
+        // Đóng dropdown nếu menu chính đóng
+        if (nationDropdownLi && nationDropdownLi.classList.contains('active')) {
+            nationDropdownLi.classList.remove('active');
+        }
+    }
+});
+
+function displayImages(country) {
+    imageGrid.innerHTML = '';
+    const data = nationData[country];
+    const images = data && data.images ? data.images : [];
+
+    if (images.length === 0 || country === 'default') {
+        imageGrid.innerHTML = `<div style="text-align: center; width: 100%; padding: 50px; color: #aaa;">
+                                <h1>Please select a country from the Nation menu.</h1>
+                                <p>Or, this nation is currently updating its banner data.</p>
+                               </div>`;
+        return;
+    }
+
+    images.forEach((imageData, index) => {
+        const gridItem = document.createElement('div');
+        gridItem.classList.add('grid-item');
+        gridItem.dataset.country = country;
+        gridItem.dataset.index = index;
+
+        const imgElement = document.createElement('img');
+        imgElement.src = imageData.url;
+        imgElement.alt = `${country} image`;
+
+        const titleElement = document.createElement('p');
+        titleElement.classList.add('grid-item-title');
+        titleElement.textContent = imageData.title || 'No Title';
+
+        const tempImage = new Image();
+
+        tempImage.onload = () => {
+            gridItem.appendChild(imgElement);
+            gridItem.appendChild(titleElement);
+            imageGrid.appendChild(gridItem);
+        };
+
+        tempImage.onerror = () => {
+            const updatingDiv = document.createElement('div');
+            updatingDiv.textContent = 'Updating...';
+            updatingDiv.classList.add('updating-message');
+
+            gridItem.appendChild(updatingDiv);
+            gridItem.appendChild(titleElement);
+            imageGrid.appendChild(gridItem);
+        };
+
+        if (imageData.url) {
+            tempImage.src = imageData.url;
+        } else {
+            tempImage.onerror();
+        }
+    });
+}
+
+imageGrid.addEventListener('click', (e) => {
+    const target = e.target.closest('.grid-item');
+    if (!target) return;
+
+    const country = target.dataset.country;
+    const index = target.dataset.index;
+
+    const countryData = nationData[country];
+    let data = null;
+    if (!countryData || !countryData.images[index]) return;
+
+    data = countryData.images[index];
+
+    if (target.querySelector('.updating-message')) {
+        overlayImage.style.display = 'none';
+    } else {
+        overlayImage.style.display = 'block';
+        overlayImage.src = data.url;
+    }
+
+    if (data) {
+        overlayTitle.textContent = data.title || 'Detailed Information';
+        overlayDate.textContent = `Start Date: ${data.startDate || 'N/A'}`;
+        overlayLink.textContent = `Link Banner`;
+        overlayLink.href = data.bannerLink || '#';
+        gridOverlay.style.display = 'flex';
+    }
+});
+
+closeBtn.addEventListener('click', () => {
+    gridOverlay.style.display = 'none';
+});
+
+
+function splitTextElements() {
+    const elements = document.querySelectorAll('.split-text');
+    elements.forEach(el => {
+        if (el.textContent && !el.querySelector('span')) {
+            const text = el.textContent.trim();
+            el.innerHTML = text.split('').map(char => {
+                return char === ' ' ? '<span> </span>' : `<span>${char}</span>`;
+            }).join('');
+        }
+    });
+}
+
+function animateSplitText(element) {
+    if (!element) return;
+    const spans = element.querySelectorAll('span');
+    spans.forEach((span, index) => {
+        setTimeout(() => {
+            span.style.opacity = 1;
+            span.style.transform = 'translateY(0)';
+        }, index * 30);
+    });
+}
+
+function initializeHomeAnimation() {
+    splitTextElements();
+
+    if (homeSection && homeSection.classList.contains('active')) {
+        if (homeHeading && homeParagraph) {
+            const resetSpans = (element) => {
+                element.querySelectorAll('span').forEach(s => {
+                    s.style.opacity = 0;
+                    s.style.transform = 'translateY(20px)';
+                    s.style.transition = 'none';
+                });
+            };
+            resetSpans(homeHeading);
+            resetSpans(homeParagraph);
+
+            setTimeout(() => {
+                const enableTransition = (element) => {
+                    element.querySelectorAll('span').forEach(s => {
+                        s.style.transition = 'opacity 0.3s ease-out, transform 0.3s ease-out';
+                    });
+                };
+                enableTransition(homeHeading);
+                enableTransition(homeParagraph);
+            }, 50);
+
+            animateSplitText(homeHeading);
+
+            const delay = homeHeading.textContent ? homeHeading.textContent.length * 30 + 100 : 500;
+
+            setTimeout(() => {
+                animateSplitText(homeParagraph);
+            }, delay);
+        }
+    }
+}
+
+function preloadImages(imageUrls) {
+    const promises = imageUrls.map(url => {
+        return new Promise((resolve) => {
+            const img = new Image();
+            img.onload = resolve;
+            img.onerror = resolve;
+            img.src = url;
+        });
+    });
+    return Promise.all(promises);
+}
+
+// LOGIC SLIDESHOW CROSS-FADE ĐÃ CHẮC CHẮN HOẠT ĐỘNG
+function changeBackground() {
+    const totalImages = homeBackgrounds.length;
+    if (totalImages < 2) return;
+
+    // Tăng chỉ số ảnh hiện tại (ảnh nằm dưới, sẽ được hiển thị sau 2s)
+    currentBgIndex = (currentBgIndex + 1) % totalImages;
+
+    // Ảnh tiếp theo (ảnh nằm trên, sẽ được tải trước)
+    const nextBgIndex = (currentBgIndex + 1) % totalImages;
+
+    // 1. Kích hoạt hiệu ứng: Đặt Layer 1 (Layer trên) mờ dần (opacity 0)
+    // Layer 1 có transition 2s, nên nó sẽ mờ dần trong 2s
+    layer1.style.opacity = 0;
+
+    // 2. Chờ hiệu ứng mờ dần hoàn tất (2000ms = 2s)
+    setTimeout(() => {
+
+        // 3. Layer 2 (Lớp dưới) giờ đang được hiển thị 
+        // -> Cập nhật Layer 2 với ảnh mới nhất (ảnh đang hiện)
+        layer2.style.backgroundImage = `url('${homeBackgrounds[currentBgIndex]}')`;
+
+        // 4. Cập nhật Layer 1 (Lớp trên) với ảnh sắp tới
+        layer1.style.backgroundImage = `url('${homeBackgrounds[nextBgIndex]}')`;
+
+        // 5. Khôi phục Layer 1 (Layer trên) opacity 1 (Hoàn tất chuyển cảnh)
+        // Layer 1 sẽ chuyển từ opacity 0 -> 1 trong 2s
+        layer1.style.opacity = 1;
+
+    }, 2000); // 2000ms phải bằng thời gian transition trong CSS
+}
+
+function startBackgroundSlideshow() {
+    const totalImages = homeBackgrounds.length;
+    if (!homeSection || totalImages === 0) return;
+
+    if (slideshowInterval) {
+        clearInterval(slideshowInterval);
+    }
+
+    preloadImages(homeBackgrounds)
+        .then(() => {
+            // Thiết lập ban đầu
+            // Layer 2 (Dưới): Ảnh 0 (Đang hiện)
+            layer2.style.backgroundImage = `url('${homeBackgrounds[0]}')`;
+            layer2.style.opacity = 1;
+
+            // Layer 1 (Trên): Ảnh 1 (Sắp tới)
+            const nextIndex = (currentBgIndex + 1) % totalImages;
+            layer1.style.backgroundImage = `url('${homeBackgrounds[nextIndex]}')`;
+            layer1.style.opacity = 1;
+
+            // Bắt đầu vòng lặp chuyển cảnh (Tổng thời gian chu kỳ: 5000ms = 3s chờ + 2s chuyển)
+            if (totalImages > 1) {
+                slideshowInterval = setInterval(changeBackground, 5000);
+            }
+        });
+}
+
+// Gọi hàm khởi động slideshow khi trang tải
+if (homeSection && homeSection.classList.contains('active')) {
+    startBackgroundSlideshow();
+}
