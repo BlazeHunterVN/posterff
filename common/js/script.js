@@ -43,10 +43,10 @@ const nationData = {
     thailand: {
         images: [
             { url: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW5_EA_DA_Bizon_Preheat1_Prime.png', startDate: '16/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW4_DA_M590_Preheat1.png', title: 'Bizon Preheat' },
-            { url: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW4_DA_M590_Preheat2.png', startDate: '16/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW4_DA_M590_Preheat2.png', title: 'M590 Preheat 2' },
-            { url: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW4_DA_M590_Preheat1.png', startDate: '15/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW4_DA_M590_Preheat1.png', title: 'M590 Preheat 1' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW4_DA_M590_Preheat2.png', startDate: '16/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW4_DA_M590_Preheat2.png', title: 'TW4 DA M590 Preheat2' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW4_DA_M590_Preheat1.png', startDate: '15/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW4_DA_M590_Preheat1.png', title: 'TW4 DA M590 Preheat1' },
             { url: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW3_UnisexBundle_FFWS.png', startDate: '15/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW3_UnisexBundle_FFWS.png', title: 'FFWS Unisex Bundle' },
-            { url: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW1_EvoVault.png', startDate: '14/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW1_EvoVault.png', title: 'Evo Vault' },
+            { url: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW1_EvoVault.png', startDate: '14/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/TH_Nov25_TW1_EvoVault.png', title: 'TW1 EvoVault' },
             { url: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/2025Nov_FA_DIGI_FlexHigh_Playwithfriends_games_Multimission_2.png', startDate: '14/11/2025', bannerLink: 'https://dl.dir.freefiremobile.com/common/Local/TH/Splash/2025Nov_FA_DIGI_FlexHigh_Playwithfriends_games_Multimission_2.png', title: 'Play with Friends' }
         ]
     },
