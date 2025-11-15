@@ -36,7 +36,7 @@ const nationData = {
     },
     taiwan: {
         images: [
-            
+
         ]
     },
     thailand: {
@@ -79,8 +79,9 @@ const nationDropdownLi = document.querySelector('.dropdown');
 const nationDropdownLink = nationDropdownLi ? nationDropdownLi.querySelector('.nav-link') : null;
 
 const homeBackgrounds = [
-    '/common/image/background_free_fire_55.png',
+    '/common/image/background_free_fire_22.png',
     '/common/image/background_free_fire_56.png',
+    '/common/image/background_free_fire_41.png',
 ];
 let currentBgIndex = 0;
 let slideshowInterval;
@@ -446,5 +447,4 @@ function startBackgroundSlideshow() {
 
 if (homeSection && homeSection.classList.contains('active')) {
     startBackgroundSlideshow();
-
 }
