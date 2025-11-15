@@ -36,7 +36,7 @@ const nationData = {
     },
     taiwan: {
         images: [
-            { url: '', startDate: '', bannerLink: '', title: 'No Data Available' }
+            
         ]
     },
     thailand: {
@@ -446,4 +446,5 @@ function startBackgroundSlideshow() {
 
 if (homeSection && homeSection.classList.contains('active')) {
     startBackgroundSlideshow();
+
 }
