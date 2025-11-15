@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Poppins-Bold';
-    src: url('../fonts/Poppins-Bold.woff') format('woff');
+    font-family: 'Matt-Trial-Bold';
+    src: url('../fonts/Matt-Trial-Bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -10,7 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins-Bold', sans-serif;
+    font-family: 'Matt-Trial-Bold', sans-serif;
 }
 
 html,
@@ -204,11 +204,23 @@ ul {
 }
 
 #home-section h2 {
-    font-size: 2.3rem;
+    font-size: 2.7rem;
+    text-shadow:
+        1px 1px 0 #ff9800,
+        -1px -1px 0 #ff9800,
+        1px -1px 0 #ff9800,
+        -1px 1px 0 #ff9800,
+        2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 
 #home-section p {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
+    text-shadow:
+        1px 1px 0 #ff9800,
+        -1px -1px 0 #ff9800,
+        1px -1px 0 #ff9800,
+        -1px 1px 0 #ff9800,
+        1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .split-text span {
@@ -273,18 +285,13 @@ ul {
     transition: opacity 0s;
 }
 
-/* Tinh chỉnh này đảm bảo hình ảnh vừa khung và bị cắt theo border-radius của .grid-item */
 .image-grid img {
     max-width: 100%;
     max-height: none;
-    /* Bỏ giới hạn max-height để ảnh lấp đầy */
     width: 100%;
     height: 100%;
-    /* Cần 100% để lấp đầy grid-item */
     object-fit: cover;
-    /* Quan trọng: Đảm bảo vừa khung và cắt bỏ phần thừa */
     border-radius: 4px;
-    /* Giữ nguyên 4px nếu bạn muốn ảnh có bo tròn nhỏ hơn item */
     margin-bottom: 0;
 }
 
@@ -533,9 +540,6 @@ ul {
         font-size: 1.2rem;
     }
 }
-
-/* --- CSS cho Nhãn UPCOMING/ACTIVE (Đã tinh chỉnh để vừa khung) --- */
-/* .grid-item đã có position: relative và overflow: hidden */
 
 .event-badge {
     position: absolute;
